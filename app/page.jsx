@@ -48,7 +48,7 @@ export default function Page() {
 	}
 
 	return (
-		<div className="min-h-screen flex flex-col bg-gradient-to-r from-indigo-600 to-purple-600 items-center justify-center p-6">
+		<div className="min-h-screen flex lg:flex-col bg-gradient-to-r from-indigo-600 to-purple-600 items-center justify-center p-6">
 			<div className="max-w-6xl w-full bg-white p-8 rounded-xl shadow-2xl flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12">
 				<div className="w-full md:w-1/3 space-y-6">
 					<h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
