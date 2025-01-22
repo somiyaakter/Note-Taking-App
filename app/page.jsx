@@ -48,9 +48,9 @@ export default function Page() {
 	}
 
 	return (
-		<div className="min-h-screen bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center p-6">
-			<div className="max-w-6xl w-full bg-white p-8 rounded-xl shadow-2xl flex space-x-12">
-				<div className="w-1/3 space-y-6">
+		<div className="min-h-screen flex flex-col bg-gradient-to-r from-indigo-600 to-purple-600 items-center justify-center p-6">
+			<div className="max-w-6xl w-full bg-white p-8 rounded-xl shadow-2xl flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12">
+				<div className="w-full md:w-1/3 space-y-6">
 					<h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
 						Note Taking App
 					</h1>
@@ -83,11 +83,11 @@ export default function Page() {
 					</form>
 				</div>
 
-				<div className="w-2/3">
+				<div className="w-full md:w-2/3">
 					<h2 className="text-3xl font-bold text-center text-gray-800 bg-gray-100 py-4 rounded-lg mb-6 shadow-md">
 						Your Notes
 					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 						{notes.map(note => (
 							<div
 								key={note.id}
