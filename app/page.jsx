@@ -3,11 +3,15 @@
 import React, { useState, useEffect } from 'react'
 
 export default function Page() {
-	const [notes, setNotes] = useState(() => {
-		const savedNotes = localStorage.getItem('notes')
-		return savedNotes ? JSON.parse(savedNotes) : []
-	})
+	const [notes, setNotes] = useState([])
 	const [edit, setEdit] = useState(null)
+
+	useEffect(() => {
+		const savedNotes = localStorage.getItem('notes')
+		if (savedNotes) {
+			setNotes(JSON.parse(savedNotes))
+		}
+	}, [])
 
 	useEffect(() => {
 		localStorage.setItem('notes', JSON.stringify(notes))
